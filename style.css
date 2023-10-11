@@ -5,6 +5,7 @@
 }
 body{
     background-color: rgb(15, 15, 15);
+    background-image: url(./img/fundo.png)
 }
 .resultado{
     color: white;
@@ -32,12 +33,9 @@ body{
 }
 img[alt=bruxa]{
     width: 550px;
-    height: 700px;
+    height: 550px;
     margin-top: -550px;
     margin-left: 1150px;
-}
-.botao{
-    color: white;
 }
 footer{
     color: white;
@@ -49,26 +47,27 @@ footer{
     margin-left: -390px;
     height: 40px;
     width: 680px;
-    display: flex;
     align-items: center;
     border-radius: 15px;
-    gap: 20px;
     justify-content: space-between;
     background-color: white;
-    box-shadow: 4px 6px 8px #0004;
     }
 
     .barrapesquisa input{
         border-radius: 15px;
         width: 100%;
         height: 100%;
+        outline: none;
     }
+
     .botao * {
         text-decoration: none;
         color: white;
         width: 220px;
         height: 30px;
+        margin-top: 100px;
         border-radius: 8px;
+        text-shadow: 2px 2px 2px purple;
         
     }
     .botao p:hover{
