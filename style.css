@@ -50,7 +50,7 @@ footer{
     margin-top: 140px;
     height: 40px;
     width: 650px;
-    padding: 12px;
+    padding: 2px;
     border-radius: 15px;
     justify-content: space-between;
     background-color: white;
@@ -61,15 +61,22 @@ footer{
 .barrapesquisa input{
     border-radius: 15px;
     width: 100%;
-    height: 100%;
-    padding: 2px;
+    height: 10%;
     border: none;
     outline: none;
     background: transparent;
-
+    padding-left: 12px;
 }
+.barrapesquisa input{
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    background: transparent;
+    border: none;
+    padding: 10px;
 
-  
+    }
 
     .botao * {
         text-decoration: none;
@@ -84,3 +91,9 @@ footer{
     .botao p:hover{
         transform: scale(1.1);
     }
+    @media (max-width: 1024px) {
+        body{
+            width: 1000px;
+        }
+    }
+  
