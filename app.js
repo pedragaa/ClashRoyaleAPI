@@ -1,47 +1,64 @@
 'use strict'
 
-const iconUrls = "https://api.clashroyale.com/v1/cards";
-const listaPersonagens = document.getElementById('list');
+// const iconUrls = "https://api.clashroyale.com/v1/cards";
+// const apiKey = "ct6bx3wa";
+// buscarPersonagens(iconUrls);
 
-async function buscarPersonagens(url,nome = '') {
-    const resposta = await fetch(nome ? `${url}?name=${nome}` : url);
-    const dados = await resposta.json();
-    exibirPersonagens(dados.results);
 
+
+const lista = document.getElementById('cards');
+const cartaNaoEncontrada = document.getElementById('aviso');
+
+const pesquise = () => {
+    const nome = document.querySelector('#input').value
+    console.log(nome)
+    buscarCarta(nome)
 }
 
-function pesquisarPersonagens(evento) {
-    evento.preventDefault();
-    const nomePersonagem = document.querySelector('#input').value;
-    buscarPersonagens(iconUrls , nomePersonagem);
+const buscarCarta = (nome) => {
+    lista.innerHTML = '';
+    cartaNaoEncontrada.innerHTML = '';
 
-}
+    const URL =  "https://api.clashroyale.com/v1/cards"
+    const apiKey = "ct6bx3wa";
 
-function exibirPersonagens(personagens) {
-    listaPersonagens.innerHTML = '';
 
-    personagens.forEach(personagens => {
-        listaPersonagens.insertAdjacentHTML('beforeend', 
-        <div class='card' onclick="mostrarInfo(this)">
-            <div class="card-header">
-                <p class='card-title'>${personagem.name}</p>
-            </div>
-            <div class="card-img">
-                <img src="${personagem.image}" alt='${personagem.name}'/>
-            </div>
-            <div class="card-body" style="display: none;">
-                <p><b>Gênero:</b> ${personagem.gender}</p>
-                <p><b>Espécie:</b> ${personagem.species}</p>
-                <p><b>Origem:</b> ${personagem.origin.name}</p>
-            </div>
-        </div>
-    );
-    });
+    if (nome.trim() === '') {
+        cartaNaoEncontrada.innerHTML = 'Digite o nome de uma carta';
+        return;
+    }
+
+    var Httpreq = new XMLHttpRequest();
+    Httpreq.open(
+        "GET",
+        "https://api.clashroyale.com/v1/cards" + nome,
+        false);
+    Httpreq.send(null);
+
+    
+
+    if (Httpreq.status === 200) {
+        var arrayCarta = JSON.parse(Httpreq.responseText);
+        console.log(arrayCarta.cards.length)
+        
+        if (arrayCarta.cards.length == 0) {
+            cartaNaoEncontrada.innerHTML = 'Carta não encontrada';
+        } else if 
+        (arrayCarta.cards && Array.isArray(arrayCarta.cards)) {
+            arrayCarta.cards.forEach(item => {
+                listEl.insertAdjacentHTML('beforeend', `
+                    <div class='card'>
+                        <div class="card-img">
+                            <img src="${item.imageUrl}" alt='${item.name}'/>
+                        </div>
+                        <div class="card-body">
+                            <!-- Adicione outras propriedades do item aqui -->
+                        </div>
+                    </div>
+                `);
+            });
+        }
+    }
 }
-function mostrarInfo(card) {
-    const cardBody = card.querySelector('.card-body');
-    cardBody.style.display = cardBody.style.display === 'none'
-}
-buscarPersonagens(urlApi);
 
    
