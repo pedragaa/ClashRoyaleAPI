@@ -3,36 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="./app.js" defer></script>
+    <link rel="stylesheet" href="/css/pag.css">
+    <script src="/backend/app.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto+Condensed:ital@1&display=swap" rel="stylesheet">
-    <link rel="icon" href="./img/icon.jpg">
-    <title>Clash Royale</title>
+    <link rel="icon" href="/css/img/icon.jpg">
+    <title>Clash Royale - Pesquisa</title>
 </head>
-<header>
-    
-</header>
 <body>
+    <main class="container">
+        <div class="content-box">
+            <div class="title">
+                <p>CLASH ROYALE</p>
+            </div>
     
-    <div class="title">
-    <p>CLASH ROYALE</p>
-    </div>
-
-    <div class="info2">
-        <p>A seguir, podemos pesquisar personagens para aprender mais sobre eles!</p>
-        <p>Experimente !!</p>
-    </div>
-      
-    <div class="barrapesquisa">
-        <form class="form" onsubmit="buscarCarta(event)">
-    <input type="text" id="input" placeholder="Pesquisar...">
-</form> 
-      </div>
-   
+            <div class="info2">
+                <p>A seguir, podemos pesquisar personagens para aprender mais sobre eles!</p>
+            </div>
+    
+            <div class="barrapesquisa">
+                <form class="form" onsubmit="buscarCarta(event)">
+                    <input type="text" id="input" placeholder="Pesquisar...">
+                </form>
+            </div>
+    
+            <!-- Área para mostrar os dados da carta pesquisada -->
+            <div id="resultado-carta" class="card-info">
+                <!-- Exemplo: Nome, imagem, tipo, raridade, descrição, etc -->
+            </div>
+        </div>
+    </main>
 </body>
-<footer>
-   
-</footer>
 </html>

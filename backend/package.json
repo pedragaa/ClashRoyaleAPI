@@ -1,0 +1,28 @@
+{
+  "type": "module",
+  "name": "clashroyaleapi",
+  "version": "1.0.0",
+  "description": "![image](https://github.com/PedrooTz/ClashRoyaleAPI/assets/124139371/6588b3ff-5f3c-4a32-823b-6025f42e2b5d)\r # Descrição do projeto:\r Site de Clash Royale desenvolvido com uma API, que auxilie na procura de cartas dentro do jogo.\r # Funcionalidade do projeto: \r Conhecer sobre o jogo e pesquisar cartas do jogo contendo a informação sobre cada uma delas.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedragaa/ClashRoyaleAPI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pedragaa/ClashRoyaleAPI/issues"
+  },
+  "homepage": "https://github.com/pedragaa/ClashRoyaleAPI#readme",
+  "dependencies": {
+    "axios": "^1.8.4",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "node-fetch": "^3.3.2"
+  }
+}

@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(15, 15, 15);
+    background-image: url(./img/fundo.png);
+    background-size: cover;
+    background-position: center;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    padding: 40px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+}
+
+.content-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    text-align: center;
+}
+
+.title p {
+    color: white;
+    text-shadow: 4px 4px 4px purple;
+    font-size: 64px;
+    margin-bottom: 32px;
+}
+
+.conteudo p {
+    color: white;
+    text-shadow: 3px 3px 3px blue;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.icon img {
+    width: 320px;
+    height: auto;
+}
+
+.botao a {
+    text-decoration: none;
+}
+
+.botao p {
+    color: white;
+    margin-top: 40px;
+    font-size: 18px;
+    background-color: rgba(128, 0, 128, 0.5);
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    text-shadow: 2px 2px 2px purple;
+}
+
+.botao p:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .icon img {
+        margin-top: 40px;
+    }
+}
