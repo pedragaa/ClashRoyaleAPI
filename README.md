@@ -8,5 +8,5 @@ Conhecer sobre o jogo e pesquisar cartas do jogo contendo a informação sobre c
 # Para testar:
 1 - Clone o repositório;
 2 - Abra no VsCode
-3 - Rode cd ./backend no terminal
-4 - Dentro da pasta, rode node ./server.js
+3 - Rode cd ./backend/ no terminal
+4 - Dentro da pasta, rode node ./server.js/
